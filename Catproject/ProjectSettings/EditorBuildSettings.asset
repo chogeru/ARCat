@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: cefd98b573b96c44bb4190e982733923
+  - enabled: 1
+    path: Assets/Hayashi/Scene/HayashiTest.unity
+    guid: a50300bf8b3faa84380020d8ee0ca9bc
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
