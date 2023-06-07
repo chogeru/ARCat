@@ -6,7 +6,7 @@ public class Shooter : MonoBehaviour
 {
     const int MaxShotPower=10;
     int shotPower = MaxShotPower;
-    AudioSource shotSound;
+    public AudioSource shotSound;
     public GameObject[] catFoodPrefabs;
     //public Transform catFoodParentTransform;
     public CatFoodManager catFoodManager;
