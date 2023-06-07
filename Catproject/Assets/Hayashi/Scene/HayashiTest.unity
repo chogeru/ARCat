@@ -996,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrain: {fileID: 0}
   objectPrefab: {fileID: 1207862356}
-  moveSpeed: 2
+  moveSpeed: 2.5
   rotateSpeed: 180
   minMoveTime: 1
   maxMoveTime: 5
