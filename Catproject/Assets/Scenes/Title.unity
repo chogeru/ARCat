@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8881634, g: 1, b: 0.14528298, a: 1}
+  m_Color: {r: 0.9881122, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 1156900128}
   - component: {fileID: 1156900127}
   m_Layer: 5
-  m_Name: "\u8A2D\u5B9Atexta"
+  m_Name: "\u8A2D\u5B9A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1689,7 +1689,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u59CB\u3081\u308B"
+  m_Text: "\u30B9\u30BF\u30FC\u30C8"
 --- !u!222 &1175326474
 CanvasRenderer:
   m_ObjectHideFlags: 0
