@@ -19,7 +19,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -27,7 +28,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -83,7 +84,152 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: "\u67D4\u3089\u304B\u30CD\u30B3(Clone)"
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: "\u67D4\u3089\u304B\u30CD\u30B3(Clone)"
+      position: {x: -0, y: 2.2191744, z: 0.00000008940697}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100.00002, z: 100.00002}
+    - name: Armature
+      parentName: "\u67D4\u3089\u304B\u30CD\u30B3(Clone)"
+      position: {x: -0, y: 2.3114374, z: -0.8925352}
+      rotation: {x: -0.830418, y: 0.00000005473916, z: 0.00000008158869, w: 0.5571408}
+      scale: {x: 100, y: 99.99999, z: 99.99999}
+    - name: hip
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: momo.L
+      parentName: hip
+      position: {x: -0.004969478, y: -0.00007534623, z: 0.00018386543}
+      rotation: {x: -0.13398202, y: -0.093819864, z: 0.9843615, w: 0.06541415}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: asi.L.
+      parentName: momo.L
+      position: {x: -3.72529e-10, y: 0.010942206, z: -6.0652383e-10}
+      rotation: {x: -0.036460407, y: -0.008177563, z: 0.079468064, w: 0.99613684}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: asi.L._end
+      parentName: asi.L.
+      position: {x: -0, y: 0.008166323, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: momo.R
+      parentName: hip
+      position: {x: 0.004969478, y: -0.00007534623, z: 0.00018386543}
+      rotation: {x: 0.13398203, y: -0.093819864, z: 0.9843615, w: -0.06541418}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: momo.R.001
+      parentName: momo.R
+      position: {x: 3.72529e-10, y: 0.010942206, z: -6.0652383e-10}
+      rotation: {x: -0.0668059, y: 0.0057100453, z: -0.11058071, w: 0.9916029}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: momo.R.001_end
+      parentName: momo.R.001
+      position: {x: -0, y: 0.008076412, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kosi
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0.80249524, y: 3.2296752e-25, z: 1.7980839e-17, w: 0.5966585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kosi_end
+      parentName: kosi
+      position: {x: -0, y: 0.01184146, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: terst
+      parentName: Armature
+      position: {x: -2.540803e-19, y: -0.003410308, z: 0.021339752}
+      rotation: {x: 0.89172083, y: 0.000000053952416, z: 0.00000010630135, w: 0.4525859}
+      scale: {x: 1, y: 0.9999999, z: 0.99999964}
+    - name: hed
+      parentName: terst
+      position: {x: -2.8447117e-16, y: 0.011434177, z: -5.9604643e-10}
+      rotation: {x: -0.16825882, y: 0.038077552, z: -0.13207966, w: 0.9761117}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: mimi.L
+      parentName: hed
+      position: {x: -0.009147386, y: 0.022660777, z: -0.0092828525}
+      rotation: {x: -0.34937745, y: 0.0506716, z: 0.13403873, w: 0.92595977}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: mimi.L_end
+      parentName: mimi.L
+      position: {x: -0, y: 0.01053729, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mimi.R
+      parentName: hed
+      position: {x: 0.009147391, y: 0.022660783, z: -0.009282846}
+      rotation: {x: -0.34937745, y: -0.05067187, z: -0.13403888, w: 0.9259597}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: mimi.R_end
+      parentName: mimi.R
+      position: {x: -0, y: 0.01053729, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ude.L
+      parentName: terst
+      position: {x: -0.00520156, y: 0.013311893, z: 0.0018720203}
+      rotation: {x: 0.418984, y: -0.315359, z: 0.5120047, w: 0.6803325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: te.L
+      parentName: ude.L
+      position: {x: -5.9604643e-10, y: 0.012064459, z: 5.1950336e-11}
+      rotation: {x: 0.016723365, y: -0.023732573, z: 0.11004387, w: 0.9935026}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: te.L_end
+      parentName: te.L
+      position: {x: -0, y: 0.007863017, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ude.R
+      parentName: terst
+      position: {x: 0.005201559, y: 0.013311891, z: 0.0018720215}
+      rotation: {x: 0.41898417, y: 0.31535903, z: -0.5120044, w: 0.68033266}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: te.R
+      parentName: ude.R
+      position: {x: -5.2154064e-10, y: 0.012064463, z: 8.4561175e-10}
+      rotation: {x: 0.016723724, y: 0.023732562, z: -0.11004402, w: 0.9935026}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: te.R_end
+      parentName: te.R
+      position: {x: -0, y: 0.007863017, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hip.001
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.28109127, y: -5.0028904e-24, z: 6.6464114e-17, w: 0.95968103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hip.002
+      parentName: hip.001
+      position: {x: 6.617445e-26, y: 0.0100968825, z: 0}
+      rotation: {x: 0.15794104, y: -1.6829023e-17, z: 2.0111216e-17, w: 0.9874486}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: hip.003
+      parentName: hip.002
+      position: {x: -1.6543611e-25, y: 0.008232445, z: 0}
+      rotation: {x: 0.32384756, y: -3.239743e-17, z: 2.4627984e-17, w: 0.9461093}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: hip.004
+      parentName: hip.003
+      position: {x: 6.617445e-26, y: 0.0088218935, z: -5.9604643e-10}
+      rotation: {x: -0.2833713, y: 2.860628e-17, z: -2.0299092e-17, w: 0.9590103}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: hip.004_end
+      parentName: hip.004
+      position: {x: -0, y: 0.008423142, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -94,7 +240,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1

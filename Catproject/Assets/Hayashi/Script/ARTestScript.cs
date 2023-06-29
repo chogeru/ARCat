@@ -21,7 +21,6 @@ public class ARTestScript : MonoBehaviour
         planeManager = GetComponent<ARPlaneManager>();
         playerInput = GetComponent<PlayerInput>();
         raycastManager = GetComponent<ARRaycastManager>();
-       
     }
     GameObject instantiatebObject = null;
     void OnTouch(InputValue touchInfo)

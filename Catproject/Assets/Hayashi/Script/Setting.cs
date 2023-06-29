@@ -8,6 +8,9 @@ public class Setting : MonoBehaviour
     public GameObject title;
     [Header("音量設定Canvas")]
     public GameObject volume;
+    public GameObject shooter;
+    public GameObject settingButton;
+    public GameObject gamescreen;
 
     public void VolumeSetting()
     {
@@ -24,5 +27,16 @@ public class Setting : MonoBehaviour
         //音量設定画面を非表示
         volume.SetActive(false);
 
+    }
+    public void GameSetting()
+    {
+        shooter.SetActive(false);
+        settingButton.SetActive(true);
+        gamescreen.SetActive(false);
+    }
+    public void CloseSetting()
+    {
+        settingButton.SetActive(false);
+        gamescreen.SetActive(true);
     }
 }
