@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class SceneLoader : MonoBehaviour
+namespace Scene
 {
-    public void ClickStartButton()
+    public class SceneLoader : MonoBehaviour
     {
-        SceneManager.LoadScene("HayashiTest");
+        public void ClickStartButton()
+        {
+            SceneManager.LoadScene("HayashiTest");
+        }
+        public void GoTitleScene()
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 }

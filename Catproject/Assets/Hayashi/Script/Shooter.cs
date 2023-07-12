@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Shooter : MonoBehaviour
 {
+    [SerializeField]
     const int MaxShotPower=10;
     int shotPower = MaxShotPower;
     public AudioSource shotSound;
     public GameObject[] catFoodPrefabs;
     //public Transform catFoodParentTransform;
     public CatFoodManager catFoodManager;
-    public float shotForce;
-    public float shotTorpe;
-    public float baseWidth;
-    public float timer;//タイマー
-    public float timeBetweenShot = 1;//弾の発射感覚
+    [SerializeField]
+    private float shotForce;
+    [SerializeField]
+    private float shotTorpe;
+    [SerializeField]
+    private float baseWidth;
+    [SerializeField]
+    private float timer;//タイマー
+    [SerializeField]
+    private float timeBetweenShot = 1;//弾の発射感覚
     void Start()
     {
         shotSound = GetComponent<AudioSource>();    
