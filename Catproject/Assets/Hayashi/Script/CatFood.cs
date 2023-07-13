@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CatFood : MonoBehaviour
+namespace Cat
 {
-    
-    public float deleteTime = 3.0f;
-    // Start is called before the first frame update
-    void Awake()
+    public class CatFood : MonoBehaviour
     {
-        //CatFoodを削除する
-        Destroy(gameObject,deleteTime);
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        // 衝突した相手にCatタグが付いているとき
-        if (collision.gameObject.tag == "Cat")
+
+        public float deleteTime = 3.0f;
+        // Start is called before the first frame update
+        void Awake()
         {
-         
-            //消える
-            Destroy(gameObject);
+            //CatFoodを削除する
+            Destroy(gameObject, deleteTime);
+        }
+        void OnCollisionEnter(Collision collision)
+        {
+            // 衝突した相手にCatタグが付いているとき
+            if (collision.gameObject.tag == "Cat")
+            {
+
+                //消える
+                Destroy(gameObject);
+            }
         }
     }
 }
