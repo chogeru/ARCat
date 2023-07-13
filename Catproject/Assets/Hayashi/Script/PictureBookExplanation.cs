@@ -1,3 +1,4 @@
+using Cat;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,13 +36,20 @@ public class PictureBookExplanation : MonoBehaviour
     [Space(25)]
     [Header("ê}ä”ÇÃê‡ñæUI")]
     private GameObject zukannUI;
-   public void MikenekoIindication()
+
+    CatMove catMove;
+    
+    public void MikenekoIindication()
     {
-        mikenekoExplanation.SetActive(true);
-        zukannUI.SetActive(false);
+        if (catMove.catzukankaihou == true)
+        {
+            mikenekoExplanation.SetActive(true);
+            zukannUI.SetActive(false);
+        }
     }
     public void CloseMikeneko()
     {
+        
         mikenekoExplanation.SetActive(false);
         zukannUI.SetActive(true);
     }

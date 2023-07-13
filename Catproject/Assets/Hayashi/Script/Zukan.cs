@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cat;
 namespace UI
 {
     public class Zukan : MonoBehaviour
@@ -22,13 +23,13 @@ namespace UI
         public GameObject zukanUI;
         //ゲーム画面用UI
         public GameObject gameUI;
+     
         public void Start()
         {
             //図鑑表示用ボタンを表示
             gameUI.SetActive(true);
             //銃をアクティブに
             shooter.SetActive(true);
-
         }
         public void GoZukan()
         {

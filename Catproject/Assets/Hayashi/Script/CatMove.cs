@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Cat
-{
     [RequireComponent(typeof(Animator))]
     public class CatMove : MonoBehaviour
     {
@@ -11,9 +9,11 @@ namespace Cat
         [SerializeField]
         [Header("猫の移動速度")]
         private float moveSpeed = 5f; // 移動速度
-        [Range(0, 100)]
+        [Range(0, 100),SerializeField]
         private int Favorability = 0;//好感度
         private Vector3 randomPosition; // ランダムな位置
+        [SerializeField]
+        public bool catzukankaihou = false;
 
         void Start()
         {
@@ -35,6 +35,10 @@ namespace Cat
             // オブジェクトの回転
             Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            if(Favorability<=15)
+            {
+                catzukankaihou = true;
+            }
         }
 
         void CalculateRandomPosition()
@@ -45,5 +49,12 @@ namespace Cat
             Vector3 offset = new Vector3(Mathf.Cos(randomAngle), 0f, Mathf.Sin(randomAngle)) * randomDistance;
             randomPosition = catTransform.position + offset;
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.CompareTag("CatFood"))
+            {
+                Favorability++;
+
+            }
+        }
     }
-}
