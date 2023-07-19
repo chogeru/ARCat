@@ -16,7 +16,7 @@ using UnityEngine;
         private Vector3 m_RandomPosition; // ƒ‰ƒ“ƒ_ƒ€‚ÈˆÊ’u
 
         [Header("”L‚Ì}ŠÓ‰ğ•ú"),SerializeField]
-        private bool m_ZukanKaihou = false;
+        public bool m_ZukanKaihou = false;
 
         void Start()
         {
