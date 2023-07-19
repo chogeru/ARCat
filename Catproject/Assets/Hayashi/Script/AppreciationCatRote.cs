@@ -4,18 +4,38 @@ using UnityEngine;
 
 public class AppreciationCatRote : MonoBehaviour
 {
-    private float catRotate=0.0f;
+    private Vector2 touchStartPos; // タッチ開始位置
+    private bool isRotating; // 回転中かどうかを示すフラグ
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        transform.position = new Vector3(500, 498, 508);
-        transform.rotation = Quaternion.Euler(catRotate, 0, 0);
-    }
+        // タッチの検出
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
 
-    // Update is called once per frame
-    void Update()
-    {
-        catRotate += Time.deltaTime;
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    // タッチが開始された位置を記録
+                    touchStartPos = touch.position;
+                    isRotating = true;
+                    break;
+
+                case TouchPhase.Moved:
+                    if (isRotating)
+                    {
+                        // タッチが移動した距離に応じてオブジェクトを回転させる
+                        Vector2 swipeDelta = touch.position - touchStartPos;
+                        float rotationAmount = swipeDelta.x * 0.5f;
+                        transform.Rotate(Vector3.up, rotationAmount, Space.World);
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                    isRotating = false;
+                    break;
+            }
+        }
     }
 }

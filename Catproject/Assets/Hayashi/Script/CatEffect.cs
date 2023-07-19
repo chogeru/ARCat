@@ -7,20 +7,22 @@ namespace Cat
     public class CatEffect : MonoBehaviour
     {
         [Header("弾があたった時のパーティクル")]
-        [SerializeField] ParticleSystem hitParticlePrefub;//着弾時演出プレハブ 
+        [SerializeField] ParticleSystem hitParticlePrefub; // 着弾時演出プレハブ 
         [Header("猫の声")]
-        public AudioSource catvoice;
-        // CatMove catMove;
+        public AudioSource catVoice;
+        public AudioClip[] catSounds; // 4種類の猫の声のオーディオクリップ
+
         private void OnCollisionEnter(Collision collision)
         {
-            //  catMove.Favorability++;
-            //着弾時に演出自動再生のゲームオブジェクトを生成
+            // 着弾時に演出自動再生のゲームオブジェクトを生成
             Instantiate(hitParticlePrefub, transform.position, transform.rotation);
-            //パーティクルの再生
+            // パーティクルの再生
             hitParticlePrefub.Play();
-            //サウンドの再生
-            catvoice.Play();
 
+            // ランダムに猫の声を再生
+            int randomSoundIndex = Random.Range(0, catSounds.Length);
+            catVoice.clip = catSounds[randomSoundIndex];
+            catVoice.Play();
         }
     }
 }

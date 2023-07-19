@@ -6,29 +6,29 @@ using UnityEngine.UI;
     public class CatFoodManager : MonoBehaviour
     {
         [Header("猫の餌の数")]
-        const int DefaultCatFoodAmount = 100;
+        const int m_DefaultCatFoodAmount = 10000;
         //現在のキャットフードのストック数
-        public int catFood = DefaultCatFoodAmount;
+        public int m_CatFood = m_DefaultCatFoodAmount;
         [Header("猫の餌の数を表示するテキスト")]
-        public Text catFoodStock; // 猫の餌残量を表示するテキスト
+        public Text m_CatFoodStock; // 猫の餌残量を表示するテキスト
 
 
         public void ConsumeCatFood()
         {
             //キャットフードが0より多かったら減らす
-            if (catFood > 0) catFood--;
+            if (m_CatFood > 0) m_CatFood--;
         }
         public int GetCatFoodAmount()
         {
-            return catFood;
+            return m_CatFood;
         }
         public void AddCatFood(int amount)
         {
-            catFood += amount;
+            m_CatFood += amount;
         }
         void Update()
         {
             //テキストの表示の更新
-            catFoodStock.text = "猫の餌 " + catFood.ToString("F0") + "個";
+            m_CatFoodStock.text = "猫の餌 " + m_CatFood.ToString("F0") + "個";
         }
     }

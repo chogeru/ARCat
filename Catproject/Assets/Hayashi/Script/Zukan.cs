@@ -8,49 +8,49 @@ namespace UI
     {
         //図鑑のUI
         [Header("図鑑のUI")]
-        public GameObject zukan;
+        public GameObject m_Zukan;
         //図鑑を表示するボタン
         [Header("図鑑を表示するボタン")]
-        public GameObject zukanGoButtan;
+        public GameObject m_ZukanGoButtan;
         //銃
         [Header("餌発射機")]
-        public GameObject shooter;
+        public GameObject m_Shooter;
         //設定用のUI
         [Header("設定用のCanvas")]
-        public GameObject settingCanvas;
+        public GameObject m_SettingCanvas;
         //図鑑のUI
 
-        public GameObject zukanUI;
+        public GameObject m_ZukanUI;
         //ゲーム画面用UI
-        public GameObject gameUI;
+        public GameObject m_GameUI;
      
         public void Start()
         {
             //図鑑表示用ボタンを表示
-            gameUI.SetActive(true);
+            m_GameUI.SetActive(true);
             //銃をアクティブに
-            shooter.SetActive(true);
+            m_Shooter.SetActive(true);
         }
         public void GoZukan()
         {
             //図鑑UIを表示
-            zukanUI.SetActive(true);
+            m_ZukanUI.SetActive(true);
             //ゲ-ム画面のUI
-            gameUI.SetActive(false);
+            m_GameUI.SetActive(false);
             //銃を使えないように
-            shooter.SetActive(false);
+            m_Shooter.SetActive(false);
             //設定用のUIを非表示
-            settingCanvas.SetActive(false);
+            m_SettingCanvas.SetActive(false);
         }
 
         public void GoGame()
         {
             //ゲーム画面のUIを表示
-            gameUI.SetActive(true);
+            m_GameUI.SetActive(true);
             //図鑑のUI
-            zukanUI.SetActive(false);
+            m_ZukanUI.SetActive(false);
             //銃をアクティブ
-            shooter.SetActive(true);
+            m_Shooter.SetActive(true);
         }
     }
 }

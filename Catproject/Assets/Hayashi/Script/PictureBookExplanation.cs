@@ -41,11 +41,8 @@ public class PictureBookExplanation : MonoBehaviour
     
     public void MikenekoIindication()
     {
-        if (catMove.m_ZukanKaihou == true)
-        {
             mikenekoExplanation.SetActive(true);
             zukannUI.SetActive(false);
-        }
     }
     public void CloseMikeneko()
     {
