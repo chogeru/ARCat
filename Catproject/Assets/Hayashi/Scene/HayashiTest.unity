@@ -9501,6 +9501,11 @@ PrefabInstance:
       propertyPath: catTransform
       value: 
       objectReference: {fileID: 951474546}
+    - target: {fileID: 3638349005708898114, guid: a505f70248b78bb46b475431eb3ddc5c,
+        type: 3}
+      propertyPath: m_CatTransform
+      value: 
+      objectReference: {fileID: 951474546}
     - target: {fileID: 3638349005708898122, guid: a505f70248b78bb46b475431eb3ddc5c,
         type: 3}
       propertyPath: rolloffMode
