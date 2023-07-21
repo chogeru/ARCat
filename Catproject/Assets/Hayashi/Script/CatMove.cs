@@ -8,7 +8,7 @@ using UnityEngine;
         public Transform m_CatTransform; // プレイヤーの位置を格納するTransform
 
         [SerializeField,Header("猫の移動速度")]
-        private float m_MoveSpeed = 5f; // 移動速度
+        private float m_MoveSpeed = 2.5f; // 移動速度
 
         [Range(0, 100),SerializeField]
         private int m_Favorability = 0;//好感度
@@ -17,7 +17,6 @@ using UnityEngine;
 
         [Header("猫の図鑑解放"),SerializeField]
         public bool m_ZukanKaihou = false;
-        private float m_MinHeightOffset = -1.0f; // 猫がプレイヤーより低い位置に行くことを制限するオフセット
     void Start()
         {
             m_CatTransform = GameObject.Find("Player").transform; // プレイヤーオブジェクトのTransformを取得
