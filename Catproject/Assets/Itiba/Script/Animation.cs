@@ -5,21 +5,6 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    public Animator animator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // アニメーターコンポーネント取得
-        animator = GetComponent<Animator>();
-
-    }
-
-    void Update()
-   {
-       
-        
-   }
-
+    [Header("うつむく")]
+    public Transform m_CatTransform;
 }
-
