@@ -15,9 +15,10 @@ using UnityEngine;
 
         private Vector3 m_RandomPosition; // ランダムな位置
 
+        private float m_PlayerYOffset = -10;//プレイヤーのy軸のオフセット
         [Header("猫の図鑑解放"),SerializeField]
         public bool m_ZukanKaihou = false;
-        private float m_MinHeightOffset = -1.0f; // 猫がプレイヤーより低い位置に行くことを制限するオフセット
+        
     void Start()
         {
             m_CatTransform = GameObject.Find("Player").transform; // プレイヤーオブジェクトのTransformを取得
@@ -49,7 +50,7 @@ using UnityEngine;
             float randomAngle = Random.Range(0f, 2f * Mathf.PI); // ランダムな角度（0から2πまで）
             float randomDistance = Random.Range(0f, 18f); // ランダムな距離（0から30まで）
 
-            Vector3 offset = new Vector3(Mathf.Cos(randomAngle), 0f, Mathf.Sin(randomAngle)) * randomDistance;
+            Vector3 offset = new Vector3(Mathf.Cos(randomAngle),0f, Mathf.Sin(randomAngle)) * randomDistance;
             m_RandomPosition = m_CatTransform.position + offset;
         }
         private void OnCollisionEnter(Collision collision)

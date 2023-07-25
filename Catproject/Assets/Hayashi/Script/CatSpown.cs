@@ -7,7 +7,7 @@ public class CatSpown : MonoBehaviour
     public GameObject[] catPrefabs; // スポーンさせるCatオブジェクトのプレハブ配列
     public Transform playerTransform; // プレイヤーのTransform
     public float spawnRadius = 5f; // スポーン範囲の半径
-
+    public float playerYoffset = -10f;//プレイヤーのY軸のオフセット
     private void Update()
     {
         // Catタグのオブジェクトを取得
@@ -25,7 +25,7 @@ public class CatSpown : MonoBehaviour
         // プレイヤーの位置を中心にランダムな位置を計算
         Vector3 spawnPosition = Random.insideUnitSphere * spawnRadius + playerTransform.position;
         spawnPosition.y = playerTransform.position.y; // Y座標をプレイヤーと同じにする
-
+        spawnPosition.y = playerYoffset;
         // ランダムに猫のプレハブを選択
         GameObject catPrefab = catPrefabs[Random.Range(0, catPrefabs.Length)];
 

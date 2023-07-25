@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 4602650971748085742}
   - component: {fileID: 4602650971748085743}
   - component: {fileID: 4602650971748085740}
+  - component: {fileID: -4214954538150714767}
   m_Layer: 0
   m_Name: "\u67D4\u3089\u304B\u732B"
   m_TagString: Cat
@@ -382,7 +383,7 @@ Animator:
   m_GameObject: {fileID: 3683539314956538547}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e7b3b7507b5bbf44292eca8028d3113d, type: 2}
+  m_Controller: {fileID: 9100000, guid: d718ff4a67797c543899a10a3eea5170, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -443,6 +444,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4602650971748085737}
   animationNames: []
+--- !u!114 &-4214954538150714767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683539314956538547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08bae81c7c5be6a4098fb29d34d80c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
+    type: 3}
+  destroySound: {fileID: 8300000, guid: 5edd39d39e6af004bbdd5af3715a97c1, type: 3}
 --- !u!1 &3770503686625992070
 GameObject:
   m_ObjectHideFlags: 0
