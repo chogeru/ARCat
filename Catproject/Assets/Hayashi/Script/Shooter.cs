@@ -48,7 +48,7 @@ public class Shooter : MonoBehaviour
 
     Vector3 GetInstantiatePosition()
     {
-        //画面のサイズとInputの割合からキャンディーの生成ポジションを計算
+        //画面のサイズとInputの割合から餌の生成ポジションを計算
         float x = baseWidth *
             (Input.mousePosition.x / Screen.width) - (baseWidth / 2);
         return transform.position + new Vector3(x, 0, 0);
@@ -69,7 +69,7 @@ public class Shooter : MonoBehaviour
         candyRigidBody.AddForce(transform.forward * shotForce);
         candyRigidBody.AddTorque(new Vector3(0, shotTorpe, 0));
         //CatFoodのストックを消費
-        catFoodManager.ConsumeCatFood();
+       
         //サウンドを再生
         shotSound.Play();
     }

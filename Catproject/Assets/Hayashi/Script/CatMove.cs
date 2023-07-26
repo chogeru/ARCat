@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-    [RequireComponent(typeof(Animator))]
+using UnityEngine.SceneManagement;
+
+[RequireComponent(typeof(Animator))]
     public class CatMove : MonoBehaviour
     {
         [Header("プレイヤーの位置を所得")]
@@ -18,10 +20,13 @@ using UnityEngine;
         private float m_PlayerYOffset = -10;//プレイヤーのy軸のオフセット
         [Header("猫の図鑑解放"),SerializeField]
         public bool m_ZukanKaihou = false;
-        
+
+    private GameObject m_ScoreText;
+
     void Start()
         {
-            m_CatTransform = GameObject.Find("Player").transform; // プレイヤーオブジェクトのTransformを取得
+        m_ScoreText = GameObject.Find("score");
+        m_CatTransform = GameObject.Find("Player").transform; // プレイヤーオブジェクトのTransformを取得
             CalculateRandomPosition(); // 最初のランダムな位置を計算
         }
 
@@ -57,7 +62,13 @@ using UnityEngine;
         {
             if(collision.gameObject.CompareTag("CatFood"))
             {
+            //スコアを加算する
+            ScoreSystem.UpdateScore(10);
             m_Favorability++;
+            if(m_Favorability==5)
+            {
+                ScoreSystem.UpdateScore(50);
             }
         }
+    }
     }

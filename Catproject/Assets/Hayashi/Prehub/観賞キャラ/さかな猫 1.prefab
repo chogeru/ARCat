@@ -1084,12 +1084,8 @@ GameObject:
   - component: {fileID: 7985244197771605749}
   - component: {fileID: 7591925716721176837}
   - component: {fileID: 7591925716721176836}
-  - component: {fileID: 7591925716721176835}
-  - component: {fileID: 7591925716721176834}
-  - component: {fileID: 7591925716721176833}
-  - component: {fileID: 7591925716721176832}
   m_Layer: 0
-  m_Name: "\u3055\u304B\u306A\u732B"
+  m_Name: "\u3055\u304B\u306A\u732B 1"
   m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,76 +1217,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.708395, y: 6.070118, z: 7.63711}
   m_Center: {x: 0.06077433, y: 2.535059, z: 1.049715}
---- !u!95 &7591925716721176835
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7321333360962088015}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d718ff4a67797c543899a10a3eea5170, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7591925716721176834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7321333360962088015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5a39f0bbe3b4640bc0178560c8e639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CatTransform: {fileID: 0}
-  m_MoveSpeed: 2
-  m_Favorability: 0
-  m_ZukanKaihou: 0
---- !u!114 &7591925716721176833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7321333360962088015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b744be8f1c713cc40bf224ae42b47b3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitParticlePrefub: {fileID: 19800000, guid: 18204b98237ccb540808f2cd2d78c2c8, type: 3}
-  catVoice: {fileID: 7591925716721176837}
-  catSounds:
-  - {fileID: 8300000, guid: 20292b91349e4d1448cb3583df82783f, type: 3}
-  - {fileID: 8300000, guid: e81ca73987eb9b848af829550529b8e8, type: 3}
-  - {fileID: 8300000, guid: 7427971e65c622c45bbcd2f96546ad24, type: 3}
-  - {fileID: 8300000, guid: 99295f1cb5b173449aee2d0784c452a7, type: 3}
-  - {fileID: 8300000, guid: 3b7bb8305377f8348936f8d13615063a, type: 3}
---- !u!114 &7591925716721176832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7321333360962088015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7617c4680028514b96f09f6602f14a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7591925716721176835}
-  animationNames: []
 --- !u!1 &7750976246241615203
 GameObject:
   m_ObjectHideFlags: 0
