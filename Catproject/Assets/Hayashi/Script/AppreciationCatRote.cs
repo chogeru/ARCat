@@ -27,7 +27,7 @@ public class AppreciationCatRote : MonoBehaviour
                     {
                         // タッチが移動した距離に応じてオブジェクトを回転させる
                         Vector2 swipeDelta = touch.position - touchStartPos;
-                        float rotationAmount = swipeDelta.x * 0.05f;
+                        float rotationAmount = swipeDelta.x * -0.01f;
                         transform.Rotate(Vector3.up, rotationAmount, Space.World);
                     }
                     break;

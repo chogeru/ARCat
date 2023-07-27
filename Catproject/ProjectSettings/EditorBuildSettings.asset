@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Hayashi/Scene/HayashiTest.unity
     guid: c40cbca22dd44b843892ab19c5d65e6f
   - enabled: 1
+    path: Assets/Hayashi/Scene/EndlessScene.unity
+    guid: 8421ff4f51b9deb4592584ecea0995dd
+  - enabled: 1
     path: Assets/Hayashi/Scene/Result.unity
     guid: 750bb1f71a4dffa4b9b0102c606ec036
   m_configObjects:

@@ -63,7 +63,7 @@ namespace UI
         }
         public void CloseSettingCanvas()
         {
-            m_SettingCanvas.SetActive(true);
+            m_SettingCanvas.SetActive(false);
             m_GameUI.SetActive(true);
             m_BuckGround.SetActive(false);
         }
