@@ -18,7 +18,7 @@ namespace Cat
         void OnCollisionEnter(Collision collision)
         {
             // Õ“Ë‚µ‚½‘Šè‚ÉCatƒ^ƒO‚ª•t‚¢‚Ä‚¢‚é‚Æ‚«
-            if (collision.gameObject.tag == "Cat")
+            if (collision.gameObject.tag == "HitPoint")
             {
                 //Á‚¦‚é
                 Destroy(gameObject);

@@ -12,9 +12,6 @@ using UnityEngine.SceneManagement;
         [SerializeField,Header("猫の移動速度")]
         private float m_MoveSpeed = 5f; // 移動速度
 
-        [Range(0, 100),SerializeField]
-        private int m_Favorability = 0;//好感度
-
         private Vector3 m_RandomPosition; // ランダムな位置
 
         private float m_PlayerYOffset = -10;//プレイヤーのy軸のオフセット
@@ -44,10 +41,6 @@ using UnityEngine.SceneManagement;
         // オブジェクトの回転
         Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-        if (m_Favorability <= 15)
-        {
-            m_ZukanKaihou = true;
-        }
       
     }
         void CalculateRandomPosition()
@@ -58,17 +51,6 @@ using UnityEngine.SceneManagement;
             Vector3 offset = new Vector3(Mathf.Cos(randomAngle),0f, Mathf.Sin(randomAngle)) * randomDistance;
             m_RandomPosition = m_CatTransform.position + offset;
         }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if(collision.gameObject.CompareTag("CatFood"))
-            {
-            //スコアを加算する
-            ScoreSystem.UpdateScore(10);
-            m_Favorability++;
-            if(m_Favorability==5)
-            {
-                ScoreSystem.UpdateScore(50);
-            }
-        }
-    }
+    
+    
     }

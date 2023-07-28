@@ -6,72 +6,73 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [SerializeField]
-    const int MaxShotPower=10;
-    int shotPower = MaxShotPower;
-    public AudioSource shotSound;
-    public GameObject[] catFoodPrefabs;
-    //public Transform catFoodParentTransform;
-    public CatFoodManager catFoodManager;
+    private int m_maxShotPower = 10;
+    private int m_shotPower;
+    public AudioSource m_shotSound;
+    public GameObject[] m_catFoodPrefabs;
+    public CatFoodManager m_catFoodManager;
     [SerializeField]
-    private float shotForce;
+    private float m_shotForce;
     [SerializeField]
-    private float shotTorpe;
+    private float m_shotTorpe;
     [SerializeField]
-    private float baseWidth;
+    private float m_baseWidth;
     [SerializeField]
-    private float timer;//タイマー
+    private float m_timer;
     [SerializeField]
-    private float timeBetweenShot = 1;//弾の発射感覚
+    private float m_timeBetweenShot = 1;
+
     void Start()
     {
-        shotSound = GetComponent<AudioSource>();    
+        m_shotSound = GetComponent<AudioSource>();
+        m_shotPower = m_maxShotPower;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        timer += Time.deltaTime;//タイマー作動
-        if (Input.GetButton("Fire1") && timer > timeBetweenShot)
-            {
-            //タイマーの時間をもとに戻す
-            timer = 0.0f;
-            Shot(); 
-
+        m_timer += Time.deltaTime;
+        if (Input.GetButton("Fire1") && m_timer > m_timeBetweenShot)
+        {
+            m_timer = 0.0f;
+            ChargeShot();
+            Shot();
         }
+    }
 
-        }
-    //CatFoodのプレハブからランダムに一つ選ぶ
+    void ChargeShot()
+    {
+        // ショットパワーのチャージ処理
+        m_shotPower = Mathf.Clamp(m_shotPower + 1, 0, m_maxShotPower);
+    }
+
     GameObject SampleCatFood()
     {
-        int index = Random.Range(0, catFoodPrefabs.Length);
-        return catFoodPrefabs[index];
+        int index = Random.Range(0, m_catFoodPrefabs.Length);
+        return m_catFoodPrefabs[index];
     }
 
     Vector3 GetInstantiatePosition()
     {
-        //画面のサイズとInputの割合から餌の生成ポジションを計算
-        float x = baseWidth *
-            (Input.mousePosition.x / Screen.width) - (baseWidth / 2);
+        float x = m_baseWidth * (Input.mousePosition.x / Screen.width) - (m_baseWidth / 2);
         return transform.position + new Vector3(x, 0, 0);
-
     }
+
     public void Shot()
     {
-        //CatFoodを生成できる条件外ならShotしない
-        if (catFoodManager.GetCatFoodAmount() <= 0) return;
-        if (shotPower <= 0) return;
-        //プレハブからCatFoodオブジェクトを生成
-        GameObject CatFood = (GameObject)Instantiate(
+        if (m_catFoodManager.GetCatFoodAmount() <= 0 || m_shotPower <= 0)
+            return;
+
+        GameObject catFood = (GameObject)Instantiate(
             SampleCatFood(),
             GetInstantiatePosition(),
             Quaternion.identity);
-        //CatFoodオブジェクトのRigidbodyを所得し力と回転を加える
-        Rigidbody candyRigidBody = CatFood.GetComponent < Rigidbody > ();
-        candyRigidBody.AddForce(transform.forward * shotForce);
-        candyRigidBody.AddTorque(new Vector3(0, shotTorpe, 0));
-        //CatFoodのストックを消費
-       
-        //サウンドを再生
-        shotSound.Play();
+
+        Rigidbody candyRigidBody = catFood.GetComponent<Rigidbody>();
+        candyRigidBody.AddForce(transform.forward * m_shotForce * m_shotPower);
+        candyRigidBody.AddTorque(new Vector3(0, m_shotTorpe * m_shotPower, 0));
+
+        m_shotPower = 0; // ショットを発射したのでパワーをリセット
+        m_catFoodManager.ConsumeCatFood(); // キャットフードのストックを消費
+        m_shotSound.Play();
     }
- 
 }

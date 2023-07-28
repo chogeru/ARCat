@@ -2430,15 +2430,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 279418564, guid: e359acbe6e6218b408e179a71e47c8dc, type: 3}
+      propertyPath: hitParticlePrefub
+      value: 
+      objectReference: {fileID: 19800004, guid: 3af6f68141914ca43ba39b2403757bd0,
+        type: 3}
+    - target: {fileID: 2111520637, guid: e359acbe6e6218b408e179a71e47c8dc, type: 3}
+      propertyPath: hitParticlePrefub
+      value: 
+      objectReference: {fileID: 19800004, guid: 3af6f68141914ca43ba39b2403757bd0,
+        type: 3}
     - target: {fileID: 7389535110133763356, guid: e359acbe6e6218b408e179a71e47c8dc,
         type: 3}
       propertyPath: m_Name
       value: "\u865A\u7121\u732B"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7389535110133763356, guid: e359acbe6e6218b408e179a71e47c8dc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7910352479764387750, guid: e359acbe6e6218b408e179a71e47c8dc,
         type: 3}
@@ -2448,7 +2453,7 @@ PrefabInstance:
     - target: {fileID: 7910352479764387750, guid: e359acbe6e6218b408e179a71e47c8dc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7160723
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 7910352479764387750, guid: e359acbe6e6218b408e179a71e47c8dc,
         type: 3}

@@ -1089,15 +1089,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb108c8b70fe8644b8546e2913affe12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSound: {fileID: 716909623}
-  catFoodPrefabs:
+  m_maxShotPower: 10
+  m_shotSound: {fileID: 716909623}
+  m_catFoodPrefabs:
   - {fileID: 4741460881108423056, guid: 4a56df5e00fd8394a8d3497b93dd62d0, type: 3}
-  catFoodManager: {fileID: 619967815}
-  shotForce: 680
-  shotTorpe: 100
-  baseWidth: 1
-  timer: 0
-  timeBetweenShot: 0.5
+  m_catFoodManager: {fileID: 619967815}
+  m_shotForce: 680
+  m_shotTorpe: 100
+  m_baseWidth: 1
+  m_timer: 0
+  m_timeBetweenShot: 0.5
 --- !u!82 &716909623
 AudioSource:
   m_ObjectHideFlags: 0
