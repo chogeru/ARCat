@@ -14,7 +14,7 @@ public class CatSpown : MonoBehaviour
         GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
 
         // Catオブジェクトが2匹未満の場合にスポーンさせる
-        if (cats.Length < 2)
+        if (cats.Length < 3)
         {
             SpawnCat();
         }

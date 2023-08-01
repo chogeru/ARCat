@@ -790,7 +790,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4355865687345440408}
-  animationNames: []
+  animationNames:
+  - "\u732B\u306E\u624B"
+  - "\u732B\u306E\u8033"
+  - "\u9996\u632F\u308A"
+  - "\u3046\u3064\u3080\u304F"
+  - "\u7ACB\u3064"
+  - "\u6A2A\u3075\u308A"
 --- !u!114 &1135470050
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -171,8 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b744be8f1c713cc40bf224ae42b47b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitParticlePrefub: {fileID: 8771972552311404798, guid: bbf9e36a48d6c5648a13889afab076fd,
-    type: 3}
+  hitParticlePrefub: {fileID: 19800004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   catVoice: {fileID: 279418565}
   catSounds:
   - {fileID: 8300000, guid: 20292b91349e4d1448cb3583df82783f, type: 3}
@@ -351,8 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b744be8f1c713cc40bf224ae42b47b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitParticlePrefub: {fileID: 8771972552311404798, guid: bbf9e36a48d6c5648a13889afab076fd,
-    type: 3}
+  hitParticlePrefub: {fileID: 19800004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   catVoice: {fileID: 2111520638}
   catSounds:
   - {fileID: 8300000, guid: 20292b91349e4d1448cb3583df82783f, type: 3}
@@ -1688,6 +1686,9 @@ MonoBehaviour:
   - "\u732B\u306E\u624B"
   - "\u732B\u306E\u8033"
   - "\u9996\u632F\u308A"
+  - "\u3046\u3064\u3080\u304F"
+  - "\u7ACB\u3064"
+  - "\u6A2A\u3075\u308A"
 --- !u!114 &448201950148236079
 MonoBehaviour:
   m_ObjectHideFlags: 0
