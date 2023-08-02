@@ -5,9 +5,9 @@ using UnityEngine;
 public class CatSpown : MonoBehaviour
 {
     public GameObject[] catPrefabs; // スポーンさせるCatオブジェクトのプレハブ配列
-    public Transform playerTransform; // プレイヤーのTransform
+    public Transform playerTransform; // プレイヤーのTransformss
     public float spawnRadius = 5f; // スポーン範囲の半径
-    public float playerYoffset = -10f;//プレイヤーのY軸のオフセット
+    public float playerYoffset = -3f;//プレイヤーのY軸のオフセット
     private void Update()
     {
         // Catタグのオブジェクトを取得

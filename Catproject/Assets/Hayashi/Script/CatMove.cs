@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
 
         private Vector3 m_RandomPosition; // ランダムな位置
 
-        private float m_PlayerYOffset = -10;//プレイヤーのy軸のオフセット
+        private float m_PlayerYOffset = -3;//プレイヤーのy軸のオフセット
         [Header("猫の図鑑解放"),SerializeField]
         public bool m_ZukanKaihou = false;
 
@@ -46,11 +46,12 @@ using UnityEngine.SceneManagement;
         void CalculateRandomPosition()
         {
             float randomAngle = Random.Range(0f, 2f * Mathf.PI); // ランダムな角度（0から2πまで）
-            float randomDistance = Random.Range(0f, 18f); // ランダムな距離（0から30まで）
+            float randomDistance = Random.Range(5f, 18f); // ランダムな距離（0から30まで）
 
             Vector3 offset = new Vector3(Mathf.Cos(randomAngle),0f, Mathf.Sin(randomAngle)) * randomDistance;
             m_RandomPosition = m_CatTransform.position + offset;
-        }
-    
-    
+        m_RandomPosition = m_CatTransform.position + offset;
+        m_RandomPosition.y = m_PlayerYOffset; // プレイヤーのy軸位置を考慮
     }
+}
+    
